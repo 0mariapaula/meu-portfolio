@@ -1,0 +1,230 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--dark-grey);
+}
+
+main {
+  padding-top: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Seção de Habilidades */
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: var(--dark-grey);
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--off-white);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.skills-category h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--burnt-orange);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background-color: var(--warm-brown);
+  color: var(--off-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  background-color: var(--burnt-orange);
+  box-shadow: 0 8px 20px rgba(210, 105, 30, 0.3);
+}
+
+/* Seção de Serviços */
+.services-section {
+  padding: 4rem 2rem;
+  background-color: var(--dark-grey);
+}
+
+.services-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--off-white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: var(--beige);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  color: var(--warm-brown);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  color: var(--dark-grey);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-secondary {
+  background-color: var(--warm-brown);
+  color: var(--off-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--burnt-orange);
+  transform: translateY(-2px);
+}
+
+/* Estilos para o botão compartilhado */
+.btn {
+  border-radius: 8px;
+  border: 2px solid var(--burnt-orange);
+  padding: 0.8em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--burnt-orange);
+  color: var(--off-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--warm-brown);
+  border-color: var(--warm-brown);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 2px solid var(--beige);
+  outline-offset: 2px;
+}
+
+/* Estilos para os cards */
+.card {
+  background: var(--warm-brown);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--beige);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(210, 105, 30, 0.2);
+}
+
+.card-title {
+  color: var(--beige);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.card-description {
+  color: var(--off-white);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: var(--burnt-orange);
+  color: var(--off-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.card-link {
+  color: var(--beige);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--burnt-orange);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .skills-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
