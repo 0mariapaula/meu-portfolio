@@ -1,4 +1,5 @@
 import './About.css';
+import euImage from '../../assets/images/Eu.png';
 
 function About() {
   return (
@@ -6,20 +7,20 @@ function About() {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h1>Olá, eu sou a<br />Maria Paula! 👋</h1>
+            <h1>Olá, eu sou a<br />Maria Paula! 🌱</h1>
             <p className="about-subtitle">
-              Sou formada pela <strong>Universidade Federal de Alagoas (UFAL)</strong>
+              Um humilde mortal que se apaixonou perdidamente pelo mundo da tecnologia.
             </p>
             <p className="about-description">
               Desenvolvedora júnior com base sólida em HTML, CSS e JavaScript. 
               Sou apaixonada por criar soluções eficientes tanto no front-end 
-              quanto no back-end, utilizando tecnologias como React e Node.js.
+              quanto no back-end, utilizando tecnologias como React e Node.js
             </p>
-            <button className="contact-btn">Contato</button>
+            <a href="#contact" className="contact-btn">Contato</a>
           </div>
           <div className="about-image">
-            <div className="image-placeholder">
-              <div className="avatar">👩🏾‍💻</div>
+            <div className="image-container">
+              <img src={euImage} alt="Maria Paula" className="profile-image" />
             </div>
           </div>
         </div>

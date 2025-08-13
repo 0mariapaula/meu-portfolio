@@ -5,8 +5,8 @@ function Header() {
     <header className="header">
       <nav className="nav">
         <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Sobre</a></li>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#projects">Portfólio</a></li>

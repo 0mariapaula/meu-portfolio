@@ -1,7 +1,7 @@
 .about {
   padding: 4rem 2rem;
-  background-color: var(--dark-grey);
-  color: var(--off-white);
+  background-color: var(--purple-dark);
+  color: var(--white);
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -24,26 +24,26 @@
   font-size: 3.5rem;
   line-height: 1.1;
   margin-bottom: 1rem;
-  color: var(--off-white);
+  color: var(--white);
 }
 
 .about-subtitle {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: var(--beige);
+  color: var(--lilac-light);
 }
 
 .about-description {
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 2rem;
-  color: var(--off-white);
+  color: var(--white);
   opacity: 0.9;
 }
 
 .contact-btn {
-  background-color: var(--burnt-orange);
-  color: var(--off-white);
+  background-color: var(--lilac-light);
+  color: var(--purple-dark);
   border: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
@@ -51,12 +51,15 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .contact-btn:hover {
-  background-color: var(--warm-brown);
+  background-color: var(--lilac-medium);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3);
+  box-shadow: 0 4px 15px rgba(208, 123, 203, 0.3);
+  color: var(--purple-dark);
 }
 
 .about-image {
@@ -65,19 +68,23 @@
   align-items: center;
 }
 
-.image-placeholder {
-  width: 350px;
-  height: 350px;
-  background-color: var(--beige);
+.image-container {
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(135deg, var(--lilac-light), var(--lilac-medium));
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 25px;
 }
 
-.avatar {
-  font-size: 8rem;
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
@@ -97,12 +104,13 @@
     font-size: 2.5rem;
   }
   
-  .image-placeholder {
-    width: 280px;
-    height: 280px;
+  .image-container {
+    width: 320px;
+    height: 320px;
+    padding: 20px;
   }
   
-  .avatar {
-    font-size: 6rem;
+  .profile-image {
+    border-radius: 12px;
   }
 }

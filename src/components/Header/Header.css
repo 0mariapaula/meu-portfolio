@@ -1,10 +1,10 @@
 .header {
-  background-color: var(--beige);
+  background-color: var(--white);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(116, 36, 114, 0.2);
 }
 
 .nav {
@@ -21,14 +21,14 @@
   margin: 0;
   padding: 0;
   gap: 2rem;
-  background-color: rgba(160, 82, 45, 0.1);
+  background-color: rgba(185, 101, 181, 0.1);
   padding: 0.8rem 2rem;
   border-radius: 25px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--warm-brown);
+  color: var(--purple-medium);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.5rem 1rem;
@@ -38,8 +38,8 @@
 
 .nav-links a:hover,
 .nav-links a.active {
-  background-color: var(--warm-brown);
-  color: var(--beige);
+  background-color: var(--purple-medium);
+  color: var(--white);
   transform: translateY(-2px);
 }
 

@@ -1,7 +1,7 @@
 .contact {
   padding: 4rem 2rem;
-  background-color: var(--dark-grey);
-  color: var(--off-white);
+  background-color: var(--purple-dark);
+  color: var(--white);
 }
 
 .container {
@@ -13,7 +13,7 @@
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.5rem;
-  color: var(--off-white);
+  color: var(--white);
 }
 
 .contact-content {
@@ -27,10 +27,11 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  background-color: var(--beige);
+  background: linear-gradient(135deg, var(--white), var(--off-white));
   padding: 2rem;
   border-radius: 15px;
-  color: var(--dark-grey);
+  color: var(--purple-dark);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-avatar {
@@ -39,17 +40,17 @@
 
 .contact-avatar .avatar {
   font-size: 4rem;
-  background-color: var(--warm-brown);
+  background: linear-gradient(135deg, var(--purple-medium), var(--lilac-medium));
   padding: 1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(162, 79, 159, 0.3);
 }
 
 .contact-text h3 {
-  color: var(--warm-brown);
+  color: var(--purple-medium);
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
@@ -57,12 +58,12 @@
 .contact-text p {
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: var(--dark-grey);
+  color: var(--purple-dark);
 }
 
 .contact-main-btn {
-  background-color: var(--burnt-orange);
-  color: var(--off-white);
+  background-color: var(--purple-medium);
+  color: var(--white);
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -73,7 +74,7 @@
 }
 
 .contact-main-btn:hover {
-  background-color: var(--warm-brown);
+  background-color: var(--purple-medium-dark);
   transform: translateY(-2px);
 }
 
@@ -87,21 +88,23 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: rgba(224, 224, 224, 0.05);
+  background-color: rgba(208, 123, 203, 0.1);
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid var(--beige);
+  border: 1px solid var(--lilac-medium);
   transition: all 0.3s ease;
 }
 
 .contact-item:hover {
-  background-color: rgba(224, 224, 224, 0.1);
+  background-color: rgba(208, 123, 203, 0.15);
   transform: translateY(-2px);
+  border-color: var(--lilac-light);
+  box-shadow: 0 4px 15px rgba(208, 123, 203, 0.2);
 }
 
 .contact-icon {
   font-size: 2rem;
-  background-color: var(--burnt-orange);
+  background: linear-gradient(135deg, var(--lilac-light), var(--lilac-medium));
   padding: 0.8rem;
   border-radius: 50%;
   display: flex;
@@ -113,13 +116,13 @@
 }
 
 .contact-item h4 {
-  color: var(--burnt-orange);
+  color: var(--lilac-light);
   margin: 0 0 0.5rem 0;
   font-size: 1rem;
 }
 
 .contact-item p {
-  color: var(--off-white);
+  color: var(--white);
   margin: 0;
   font-size: 0.9rem;
 }
