@@ -112,12 +112,17 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="skills-section-divider-wrapper">
+          <hr className="fullwidth-divider" aria-hidden="true" />
+        </div>
         <div id="habilidades" className="skills-section">
           <div className="container">
             <h2>Habilidades</h2>
             <div className="skills-grid">
               <div className="skills-category">
-                <h3>FRONTEND ⬇</h3>
+                <h3 className="skills-title-glow">
+                  FRONTEND
+                </h3>
                 <div className="skills-icons">
                   {displayedFrontendSkills.map((skill, index) => (
                     <div key={index} className="skill-item">
@@ -134,7 +139,9 @@ function App() {
                 </button>
               </div>
               <div className="skills-category">
-                <h3>BACKEND ⬇</h3>
+                <h3 className="skills-title-glow">
+                  BACKEND
+                </h3>
                 <div className="skills-icons">
                   {displayedBackendSkills.map((skill, index) => (
                     <div key={index} className="skill-item">
