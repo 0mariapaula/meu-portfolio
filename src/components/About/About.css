@@ -28,11 +28,11 @@
 }
 
 .about-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: var(--lilac-light);
+  font-size: 1.25rem;
+  color: #b983d6;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
 }
-
 .about-description {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -88,29 +88,37 @@
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .about {
-    padding: 3rem 1rem;
+    padding: 2.2rem 0.5rem;
     min-height: auto;
   }
-  
   .about-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.2rem;
     text-align: center;
   }
-  
   .about-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
-  
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
   .image-container {
-    width: 320px;
-    height: 320px;
-    padding: 20px;
+    width: 220px;
+    height: 220px;
+    padding: 10px;
+    margin: 0 auto;
   }
-  
   .profile-image {
-    border-radius: 12px;
+    border-radius: 10px;
+  }
+  .contact-btn {
+    width: 100%;
+    min-width: 160px;
+    font-size: 1rem;
+    padding: 1.1rem 0;
+    margin-bottom: 1.2rem;
   }
 }

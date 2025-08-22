@@ -1,3 +1,30 @@
+@media (max-width: 900px) {
+  body {
+    font-size: 1rem;
+    padding: 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 1.5rem 0.3rem;
+  }
+  button, .btn {
+    font-size: 1rem;
+    padding: 1.1rem 0.5rem;
+    min-width: 140px;
+    border-radius: 8px;
+  }
+  a {
+    min-width: 100px;
+    padding: 0.6rem 0.3rem;
+    font-size: 1rem;
+    display: inline-block;
+  }
+}
 :root {
   /* Nova Paleta de Cores Roxa/Lilás */
   --purple-dark: #742472;

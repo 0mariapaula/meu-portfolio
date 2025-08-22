@@ -98,7 +98,7 @@ function App() {
               </div>
               <div className="sobre-text">
                 <h2>Sobre mim</h2>
-                <p>
+                <p style={{ fontWeight: 'bold' }}>
                   Sou Maria Paula, uma desenvolvedora em formação com base sólida em 
                   Análise e Desenvolvimento de Sistemas. Minhas competências abrangem 
                   tanto o desenvolvimento front-end quanto o back-end, com foco em 
@@ -107,7 +107,7 @@ function App() {
                   fui responsável pela implementação de funcionalidades principais, como o 
                   cadastro de doadores e a integração com sistemas de notificações.
                 </p>
-                <p>
+                <p style={{ fontWeight: 'bold' }}>
                   Durante meu período no Instituto Federal de Alagoas (IFAL), atuei em 
                   projetos práticos como o Plantour e o Conexão Sangue, aplicando 
                   conhecimentos em UX/UX e metodologias ágeis. Além disso, minha 
