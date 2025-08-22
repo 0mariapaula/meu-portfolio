@@ -1,3 +1,31 @@
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: filter 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(124,58,237,0.13);
+  opacity: 1;
+}
+.carousel-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+.carousel-arrow-left {
+  left: -2.8rem;
+}
+.carousel-arrow-right {
+  right: -2.8rem;
+}
+.carousel-arrow:hover:not(:disabled) svg circle {
+  filter: drop-shadow(0 2px 8px #a78bfa);
+  stroke: #5b21b6;
+}
 .projects {
   padding: 4rem 2rem;
   background-color: var(--purple-dark);
@@ -15,11 +43,19 @@
   color: var(--off-white);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+.projects-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: 2rem;
   margin-top: 2rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.projects-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 768px) {

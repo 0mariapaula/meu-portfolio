@@ -86,7 +86,15 @@ function App() {
                 <div className="profile-circle">
                   <img src={euImage} alt="Maria Paula" className="sobre-profile-img" />
                 </div>
-                <button className="download-cv-btn">Download CV</button>
+                <a
+                  href="/Curriculo%20Atualizado.pdf"
+                  download
+                  className="download-cv-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
               </div>
               <div className="sobre-text">
                 <h2>Sobre mim</h2>
