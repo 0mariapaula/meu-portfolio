@@ -1,3 +1,49 @@
+@media (max-width: 900px) {
+  .contact-figma-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0;
+  }
+  .contact-figma-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(116,36,114,0.06);
+    padding: 1.2rem 0.7rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0.5rem;
+  }
+  .contact-figma-icon img {
+    width: 38px !important;
+    height: 38px !important;
+    margin-bottom: 0.2rem;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: block;
+  }
+  .contact-figma-label {
+    font-weight: 600;
+    color: var(--purple-medium);
+    margin-bottom: 0.1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .contact-figma-info, .contact-figma-info a {
+    font-size: 1.08rem;
+    color: var(--purple-dark);
+    word-break: break-all;
+    text-align: center;
+    display: block;
+  }
+}
 .contact-figma-caption-wrapper {
   margin-top: -0.7rem;
   margin-bottom: 2.2rem;

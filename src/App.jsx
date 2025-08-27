@@ -76,7 +76,8 @@ function App() {
   }
   return (
     <div className="App">
-      <Header />
+      {/* Esconde o Header quando o modal está aberto */}
+      {!isModalOpen && <Header />}
       <main>
         <About />
         <div id="sobre" className="sobre-section">
