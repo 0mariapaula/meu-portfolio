@@ -4,6 +4,13 @@ import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Modal from './components/shared/Modal'
+import {
+  aboutParagraphs,
+  frontendSkills,
+  backendSkills,
+  frontendServices,
+  backendServices
+} from './data/profileData'
 import euImage from './assets/images/Eu.png'
 import './App.css'
 
@@ -13,57 +20,8 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalType, setModalType] = useState('')
 
-  const frontendSkills = [
-    { icon: "🌐", name: "HTML" },
-    { icon: "🎨", name: "CSS" },
-    { icon: "⚡", name: "JavaScript" },
-    { icon: "⚛️", name: "React" },
-    { icon: "📝", name: "TypeScript" },
-    { icon: "📱", name: "React Native" },
-    { icon: "💚", name: "Vue.js" },
-    { icon: "🎯", name: "Figma" },
-    { icon: "🖼️", name: "UI Design" },
-    { icon: "🔗", name: "API Integration" }
-  ]
-
-  const backendSkills = [
-    { icon: "🟢", name: "Node.js" },
-    { icon: "🐍", name: "Python" },
-    { icon: "🗄️", name: "MariaDB" },
-    { icon: "🐬", name: "MySQL" },
-    { icon: "📊", name: "SQL" },
-    { icon: "🌐", name: "APIs" },
-    { icon: "🔥", name: "Firebase" },
-    { icon: "⚙️", name: "Backend Dev" },
-    { icon: "📮", name: "Postman" }
-  ]
-
   const displayedFrontendSkills = showAllFrontend ? frontendSkills : frontendSkills.slice(0, 4)
   const displayedBackendSkills = showAllBackend ? backendSkills : backendSkills.slice(0, 4)
-
-  const frontendServices = [
-    { icon: "🔧", title: "Desenvolvimento de Funcionalidades", description: "Desenvolvimento de novas funcionalidades e componentes em projetos" },
-    { icon: "🎨", title: "Interface do Usuário (UI)", description: "Desenvolvimento da interface do usuário (UI)" },
-    { icon: "🔗", title: "Integração com APIs", description: "Integração com APIs" },
-    { icon: "🐛", title: "Correção de Bugs", description: "Correção de bugs e problemas reportados por usuários" },
-    { icon: "🌐", title: "Sistemas Web", description: "Desenvolvimento de sistemas web" },
-    { icon: "📱", title: "Aplicativos Móveis", description: "Desenvolvimento de aplicativos móveis" },
-    { icon: "🎯", title: "Prototipagem e Design", description: "Prototipagem e design de interface (UI/UX)" }
-  ]
-
-  const backendServices = [
-    { icon: "⚙️", title: "Desenvolvimento de Funcionalidades", description: "Desenvolvimento de novas funcionalidades e componentes" },
-    { icon: "🔥", title: "Funcionalidades Principais", description: "Implementação de funcionalidades principais em projetos" },
-    { icon: "🌐", title: "Sistemas Web", description: "Desenvolvimento de sistemas web" },
-    { icon: "🔗", title: "Integração com APIs", description: "Integração com APIs" },
-    { icon: "👥", title: "Colaboração em Equipe", description: "Colaboração com equipes de back-end para implementar funcionalidades" },
-    { icon: "🐛", title: "Correção de Bugs", description: "Correção de bugs e problemas reportados" },
-    { icon: "🔔", title: "Sistemas de Notificações", description: "Implementação de sistemas de notificações" },
-    { icon: "🗄️", title: "Sistemas Backend", description: "Desenvolvimento de sistemas backend" },
-    { icon: "📡", title: "APIs Escaláveis", description: "Desenvolvimento de APIs escaláveis" },
-    { icon: "🔄", title: "Desenvolvimento Full-Stack", description: "Desenvolvimento Full-Stack" },
-    { icon: "☁️", title: "Arquitetura Serverless", description: "Trabalho com arquitetura serverless (com base na experiência com Firebase)" }
-  ]
 
   const openModal = (type) => {
     setModalType(type)
@@ -99,24 +57,11 @@ function App() {
               </div>
               <div className="sobre-text">
                 <h2>Sobre mim</h2>
-                <p style={{ fontWeight: 'bold' }}>
-                  Sou Maria Paula, uma desenvolvedora em formação com base sólida em 
-                  Análise e Desenvolvimento de Sistemas. Minhas competências abrangem 
-                  tanto o desenvolvimento front-end quanto o back-end, com foco em 
-                  tecnologias como JavaScript, React, Node.js e Python. Minha experiência 
-                  em back-end foi aplicada especialmente no projeto Conexão Sangue, onde 
-                  fui responsável pela implementação de funcionalidades principais, como o 
-                  cadastro de doadores e a integração com sistemas de notificações.
-                </p>
-                <p style={{ fontWeight: 'bold' }}>
-                  Durante meu período no Instituto Federal de Alagoas (IFAL), atuei em 
-                  projetos práticos como o Plantour e o Conexão Sangue, aplicando 
-                  conhecimentos em UX/UX e metodologias ágeis. Além disso, minha 
-                  trajetória inclui capacitação intensiva na Residência em TIC BRISA e um 
-                  estágio no Hospital Universitário Professor Alberto Antunes (HUPAA/UFAL). 
-                  Sou apaixonada por tecnologia e busco desafios onde possa usar minhas 
-                  habilidades para criar soluções eficientes e impactantes.
-                </p>
+                {aboutParagraphs.map((paragraph) => (
+                  <p key={paragraph} style={{ fontWeight: 'bold' }}>
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

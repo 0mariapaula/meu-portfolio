@@ -7,11 +7,6 @@ import LinkedInIcon from '../../assets/icons/LinkedIn.png';
 import GitHubIcon from '../../assets/icons/GitHub.png';
 
 function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Mensagem enviada! Entrarei em contato em breve.');
-  };
-
   return (
     <section id="contact" className="contact contact-figma">
       <div className="container contact-figma-container">

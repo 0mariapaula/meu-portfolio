@@ -74,7 +74,7 @@ function Projects() {
                 msOverflowStyle: 'none',
               }}
             >
-              {repos.map((repo, idx) => (
+              {repos.map((repo) => (
                 <div
                   key={repo.id}
                   style={{ minWidth: 350, maxWidth: 400, flex: '0 0 80%', scrollSnapAlign: 'center' }}
