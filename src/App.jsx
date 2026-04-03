@@ -3,14 +3,10 @@ import Header from './components/Header/Header'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
-import Modal from './components/shared/Modal'
 import AboutProfileSection from './components/sections/AboutProfileSection'
 import SkillsSection from './components/sections/SkillsSection'
 import ServicesSection from './components/sections/ServicesSection'
-import {
-  frontendServices,
-  backendServices
-} from './data/profileData'
+import ServiceDetailsModal from './components/sections/ServiceDetailsModal'
 import euImage from './assets/images/Eu.png'
 import './App.css'
 
@@ -40,23 +36,7 @@ function App() {
         <Contact />
       </main>
 
-      <Modal 
-        isOpen={isModalOpen} 
-        onClose={closeModal}
-        title={modalType === 'frontend' ? 'Serviços de Front-End' : 'Serviços de Back-End'}
-      >
-        <ul className="service-list">
-          {(modalType === 'frontend' ? frontendServices : backendServices).map((service, index) => (
-            <li key={index} className="service-item">
-              <div className="service-icon">{service.icon}</div>
-              <div className="service-text">
-                <h4>{service.title}</h4>
-                <p>{service.description}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </Modal>
+      <ServiceDetailsModal isOpen={isModalOpen} onClose={closeModal} serviceType={modalType} />
     </div>
   )
 }
