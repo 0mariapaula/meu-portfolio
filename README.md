@@ -1,91 +1,79 @@
 # Meu Portfólio
 
-Um portfólio pessoal moderno desenvolvido com React e Vite.
+Portfólio pessoal desenvolvido com React + Vite.
 
-## 🚀 Tecnologias Utilizadas
+## Estado atual do projeto
+
+- Versão histórica preservada: `v1.0.0`
+- Branch de arquivo da versão histórica: `archive/v1`
+- Trilha ativa da nova evolução: `v2/dev`
+
+## Stack
 
 - React
 - Vite
 - CSS3
-- JavaScript ES6+
+- JavaScript (ES Modules)
 
-## 📁 Estrutura do Projeto
+## Execução local
 
+1. Instalar dependências:
+
+```bash
+npm install
 ```
+
+2. Rodar ambiente de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Gerar build de produção:
+
+```bash
+npm run build
+```
+
+4. Publicar no GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+## Estrutura principal
+
+```text
 src/
-├── assets/
-│   ├── images/   (Para fotos, logomarcas, avatares)
-│   ├── icons/    (Para ícones SVG)
-│   └── fonts/    (Para arquivos de fontes personalizadas)
-├── components/
-│   ├── About/      (Seção "Sobre Mim")
-│   │   ├── About.jsx
-│   │   └── About.css
-│   ├── Contact/    (Seção "Contato")
-│   │   ├── Contact.jsx
-│   │   └── Contact.css
-│   ├── Header/     (Cabeçalho de navegação)
-│   │   ├── Header.jsx
-│   │   └── Header.css
-│   ├── Projects/   (Seção de projetos)
-│   │   ├── Projects.jsx
-│   │   └── Projects.css
-│   └── shared/     (Componentes reutilizáveis)
-│       ├── Button.jsx
-│       └── Card.jsx
-├── styles/
-│   └── global.css    (Estilos globais)
-├── App.jsx         (Componente principal)
-└── main.jsx        (Ponto de entrada)
+   components/
+      About/
+      Contact/
+      Header/
+      Projects/
+      shared/
+   assets/
+      icons/
+      images/
+   styles/
+   App.jsx
+   main.jsx
 ```
 
-## 🎯 Funcionalidades
+## Fluxo de versionamento
 
-- ✅ Design responsivo
-- ✅ Navegação suave
-- ✅ Seção Sobre Mim
-- ✅ Galeria de Projetos
-- ✅ Formulário de Contato
-- ✅ Componentes reutilizáveis
-- ✅ Estrutura modular e organizada
+1. Desenvolvimento contínuo na branch `v2/dev`.
+2. Marcos estáveis com tags (`v2.0.0-alpha.x`, `v2.0.0`, etc).
+3. `v1.0.0` e `archive/v1` permanecem como registro histórico.
 
-## 🛠️ Como executar o projeto
+## Checkpoints de segurança
 
-1. Clone o repositório
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Execute o projeto:
-   ```bash
-   npm run dev
-   ```
-4. Acesse `http://localhost:5173` no seu navegador
+Antes de cada publicação:
 
-## 📝 Próximos passos
+1. Executar `npm run build` sem erros.
+2. Confirmar branch correta (`git status -sb`).
+3. Criar tag do marco.
+4. Publicar branch e tag no remoto.
 
-- [ ] Adicionar imagens reais
-- [ ] Implementar funcionalidade de envio de email
-- [ ] Adicionar animações
-- [ ] Integrar com APIs externas
-- [ ] Adicionar modo dark/light
-- [ ] Implementar testes
+## Roadmap
 
-## 🤝 Contribuição
-
-Sinta-se livre para contribuir com melhorias!
-
----
-
-Desenvolvido com ❤️ por [Seu Nome]+ Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Roadmap técnico da nova versão em `docs/V2-ROADMAP.md`.
