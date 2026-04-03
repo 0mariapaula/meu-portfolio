@@ -3,7 +3,7 @@ import { frontendServices, backendServices } from '../../data/profileData'
 
 function ServiceDetailsModal({ isOpen, onClose, serviceType }) {
   const isFrontend = serviceType === 'frontend'
-  const title = isFrontend ? 'Servicos de Front-End' : 'Servicos de Back-End'
+  const title = isFrontend ? 'Serviços de Front-End' : 'Serviços de Back-End'
   const services = isFrontend ? frontendServices : backendServices
 
   return (
