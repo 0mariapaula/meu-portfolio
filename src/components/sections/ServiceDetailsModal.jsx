@@ -1,9 +1,10 @@
 import Modal from '../shared/Modal'
 import { frontendServices, backendServices } from '../../data/profileData'
+import { portfolioCopy } from '../../data/portfolioCopy'
 
 function ServiceDetailsModal({ isOpen, onClose, serviceType }) {
   const isFrontend = serviceType === 'frontend'
-  const title = isFrontend ? 'Serviços de Front-End' : 'Serviços de Back-End'
+  const title = isFrontend ? portfolioCopy.services.frontendModalTitle : portfolioCopy.services.backendModalTitle
   const services = isFrontend ? frontendServices : backendServices
 
   return (

@@ -1,4 +1,5 @@
 import { aboutParagraphs } from '../../data/profileData'
+import { portfolioCopy } from '../../data/portfolioCopy'
 
 function AboutProfileSection({ profileImage }) {
   return (
@@ -16,11 +17,11 @@ function AboutProfileSection({ profileImage }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Download CV
+              {portfolioCopy.about.downloadCv}
             </a>
           </div>
           <div className="sobre-text">
-            <h2>Sobre mim</h2>
+            <h2>{portfolioCopy.about.title}</h2>
             {aboutParagraphs.map((paragraph) => (
               <p key={paragraph} style={{ fontWeight: 'bold' }}>
                 {paragraph}

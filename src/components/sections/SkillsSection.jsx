@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { frontendSkills, backendSkills } from '../../data/profileData'
+import { portfolioCopy } from '../../data/portfolioCopy'
 
 function SkillsSection() {
   const [showAllFrontend, setShowAllFrontend] = useState(false)
@@ -15,10 +16,10 @@ function SkillsSection() {
       </div>
       <div id="habilidades" className="skills-section">
         <div className="container">
-          <h2>Habilidades</h2>
+          <h2>{portfolioCopy.skills.title}</h2>
           <div className="skills-grid">
             <div className="skills-category">
-              <h3 className="skills-title-glow">FRONTEND</h3>
+              <h3 className="skills-title-glow">{portfolioCopy.skills.frontendTitle}</h3>
               <div className="skills-icons">
                 {displayedFrontendSkills.map((skill) => (
                   <div key={skill.name} className="skill-item">
@@ -28,12 +29,12 @@ function SkillsSection() {
                 ))}
               </div>
               <button className="ver-mais-btn" onClick={() => setShowAllFrontend(!showAllFrontend)}>
-                {showAllFrontend ? 'Ver menos' : 'Ver mais'}
+                {showAllFrontend ? portfolioCopy.skills.showLess : portfolioCopy.skills.showMore}
               </button>
             </div>
 
             <div className="skills-category">
-              <h3 className="skills-title-glow">BACKEND</h3>
+              <h3 className="skills-title-glow">{portfolioCopy.skills.backendTitle}</h3>
               <div className="skills-icons">
                 {displayedBackendSkills.map((skill) => (
                   <div key={skill.name} className="skill-item">
@@ -43,7 +44,7 @@ function SkillsSection() {
                 ))}
               </div>
               <button className="ver-mais-btn" onClick={() => setShowAllBackend(!showAllBackend)}>
-                {showAllBackend ? 'Ver menos' : 'Ver mais'}
+                {showAllBackend ? portfolioCopy.skills.showLess : portfolioCopy.skills.showMore}
               </button>
             </div>
           </div>
