@@ -1,18 +1,36 @@
+.App {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(217, 146, 255, 0.14), transparent 34%),
+    linear-gradient(180deg, #4f144f 0%, var(--purple-dark) 34%, #3b103c 100%);
+}
+
+main {
+  padding-top: 0;
+  overflow-x: clip;
+}
+
+.container {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
 /* Linha roxa simples, fina e de largura total */
 .skills-section-divider-wrapper {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  padding-inline: 1rem;
 }
 .fullwidth-divider {
   border: none;
-  height: 4px;
+  height: 3px;
   width: 100%;
-  background: var(--purple-medium);
+  background: linear-gradient(90deg, transparent, var(--lilac-light), transparent);
   margin: 0;
   display: block;
 }
 /* Glow e destaque para títulos de skills */
 .skills-title-glow {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
   font-weight: 800;
   color: var(--purple-medium);
   letter-spacing: 1px;
@@ -34,21 +52,6 @@
 }
 /* Linha roxa simples como divisor entre seções */
 /* Faixa roxa decorativa entre seções */
-.App {
-  min-height: 100vh;
-  background-color: var(--purple-dark);
-}
-
-main {
-  padding-top: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
 /* Divider entre seções */
 .section-divider {
   width: 80px;
@@ -63,7 +66,7 @@ main {
 
 /* Seção Sobre Mim */
 .sobre-section {
-  padding: 4rem 2rem;
+  padding: clamp(3rem, 6vw, 5rem) 0;
   background-color: var(--white);
   color: var(--purple-dark);
 }
@@ -71,9 +74,9 @@ main {
 .sobre-content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 3rem;
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -85,13 +88,13 @@ main {
 }
 
 .profile-circle {
-  width: 300px;
-  height: 300px;
+  width: clamp(220px, 28vw, 300px);
+  height: clamp(220px, 28vw, 300px);
   border-radius: 50%;
   overflow: hidden;
   background: linear-gradient(135deg, var(--purple-medium), var(--lilac-medium));
   padding: 8px;
-  box-shadow: 0 12px 35px rgba(116, 36, 114, 0.3);
+  box-shadow: 0 18px 40px rgba(116, 36, 114, 0.28);
 }
 
 .sobre-profile-img {
@@ -111,7 +114,11 @@ main {
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(162, 79, 159, 0.3);
+  box-shadow: 0 8px 22px rgba(162, 79, 159, 0.25);
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .download-cv-btn:hover {
@@ -122,7 +129,7 @@ main {
 .sobre-text h2 {
   color: var(--purple-dark);
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(116, 36, 114, 0.1);
 }
@@ -133,28 +140,28 @@ main {
   text-align: justify;
   color: var(--purple-dark);
   opacity: 0.9;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
 }
 
 /* Seção de Habilidades */
 .skills-section {
-  padding: 4rem 2rem;
-  background: var(--white);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,240,255,0.98));
 }
 
 .skills-section h2 {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--purple-dark);
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1000px;
+  gap: clamp(2rem, 4vw, 4rem);
+  max-width: 1040px;
   margin: 0 auto;
 }
 
@@ -172,7 +179,7 @@ main {
 
 .skills-icons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -180,7 +187,7 @@ main {
 .skill-item {
   background: linear-gradient(135deg, var(--purple-medium), var(--purple-medium-dark));
   color: var(--white);
-  padding: 1.2rem;
+  padding: 1rem;
   border-radius: 12px;
   text-align: center;
   font-weight: 600;
@@ -236,15 +243,17 @@ main {
 
 /* Seção de Serviços */
 .services-section {
-  padding: 4rem 2rem;
-  background-color: var(--purple-dark);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background:
+    radial-gradient(circle at top, rgba(217, 146, 255, 0.15), transparent 34%),
+    linear-gradient(180deg, var(--purple-dark), #481448 100%);
 }
 
 .services-section h2 {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
 }
 
@@ -252,13 +261,13 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 800px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
 .service-card {
-  background: linear-gradient(135deg, #fff 60%, #e9c6f7 100%);
-  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 60%, rgba(233,198,247,0.98) 100%);
+  padding: 2.5rem 2rem;
   border-radius: 22px;
   text-align: center;
   transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
@@ -285,7 +294,7 @@ main {
 .service-card h3 {
   color: var(--purple-medium);
   margin-bottom: 1.5rem;
-  font-size: 2.1rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
   font-weight: 900;
   background: linear-gradient(90deg, var(--purple-medium) 60%, var(--lilac-light) 100%);
   -webkit-background-clip: text;
@@ -300,7 +309,7 @@ main {
   color: var(--purple-dark);
   margin-bottom: 2.2rem;
   line-height: 1.7;
-  font-size: 1.13rem;
+  font-size: clamp(1rem, 1.2vw, 1.13rem);
   opacity: 0.92;
 }
 
@@ -323,7 +332,6 @@ main {
   background: linear-gradient(90deg, var(--purple-medium-dark) 60%, var(--purple-dark) 100%);
   transform: scale(1.06) translateY(-3px);
   box-shadow: 0 10px 32px rgba(208, 123, 203, 0.22);
-/* fim do bloco .btn-secondary:hover */
 }
 
 /* Estilos para o botão compartilhado */
@@ -410,20 +418,38 @@ main {
   color: var(--lilac-medium);
 }
 
-@media (max-width: 768px) {
-  .sobre-content {
+@media (max-width: 1024px) {
+  .sobre-content,
+  .skills-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+  }
+
+  .sobre-image {
+    order: -1;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 1.25rem, 100%);
+  }
+
+  .sobre-content {
     text-align: center;
   }
   
   .sobre-text h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   .profile-circle {
-    width: 250px;
-    height: 250px;
+    width: clamp(200px, 55vw, 250px);
+    height: clamp(200px, 55vw, 250px);
   }
   
   .sobre-text p {
@@ -434,19 +460,14 @@ main {
     font-size: 2rem;
   }
   
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  
   .skills-icons {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.8rem;
   }
   
   .skill-item {
-    padding: 1rem;
-    min-height: 70px;
+    padding: 0.9rem;
+    min-height: 72px;
   }
   
   .skill-item span {
@@ -456,8 +477,40 @@ main {
   .skills-category h3 {
     font-size: 1.3rem;
   }
-  
-  .services-grid {
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .btn-secondary,
+  .ver-mais-btn,
+  .download-cv-btn,
+  .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-section,
+  .skills-section,
+  .services-section {
+    padding: 2.5rem 0;
+  }
+
+  .skills-section-divider-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-icons {
     grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    min-height: 64px;
+  }
+
+  .service-card h3 {
+    letter-spacing: 0.5px;
   }
 }

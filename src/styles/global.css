@@ -35,11 +35,11 @@
   --white: #FFFFFF;
   --off-white: #F8F8F8;
   
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Avenir Next', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: dark;
+  color-scheme: light dark;
   color: var(--white);
   background-color: var(--purple-dark);
 
@@ -64,6 +64,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--purple-dark);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -116,6 +120,13 @@ button:focus,
 button:focus-visible {
   outline: 2px solid var(--white);
   outline-offset: 2px;
+}
+
+a:focus,
+a:focus-visible {
+  outline: 2px solid var(--lilac-light);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 /* Removido - usando apenas modo escuro */
